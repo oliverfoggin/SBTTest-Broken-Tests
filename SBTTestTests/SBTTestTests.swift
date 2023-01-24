@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import SBTTest
+//@testable import SBTTest
 
 final class SBTTestTests: XCTestCase {
 

@@ -14,6 +14,9 @@
 		F6350A96297FDEAF002E369A /* SBTTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6350A95297FDEAF002E369A /* SBTTestTests.swift */; };
 		F6350AA0297FDEAF002E369A /* SBTTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6350A9F297FDEAF002E369A /* SBTTestUITests.swift */; };
 		F6350AA2297FDEAF002E369A /* SBTTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6350AA1297FDEAF002E369A /* SBTTestUITestsLaunchTests.swift */; };
+		F6350AB0297FDED6002E369A /* SBTUITestTunnelClient in Frameworks */ = {isa = PBXBuildFile; productRef = F6350AAF297FDED6002E369A /* SBTUITestTunnelClient */; };
+		F6350AB2297FDED6002E369A /* SBTUITestTunnelServer in Frameworks */ = {isa = PBXBuildFile; productRef = F6350AB1297FDED6002E369A /* SBTUITestTunnelServer */; };
+		F6350AB4297FE2E3002E369A /* mockVersions.json in Resources */ = {isa = PBXBuildFile; fileRef = F6350AB3297FE2E3002E369A /* mockVersions.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,7 @@
 		F6350A9B297FDEAF002E369A /* SBTTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBTTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6350A9F297FDEAF002E369A /* SBTTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBTTestUITests.swift; sourceTree = "<group>"; };
 		F6350AA1297FDEAF002E369A /* SBTTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBTTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F6350AB3297FE2E3002E369A /* mockVersions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mockVersions.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6350AB2297FDED6002E369A /* SBTUITestTunnelServer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6350AB0297FDED6002E369A /* SBTUITestTunnelClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +129,7 @@
 			children = (
 				F6350A9F297FDEAF002E369A /* SBTTestUITests.swift */,
 				F6350AA1297FDEAF002E369A /* SBTTestUITestsLaunchTests.swift */,
+				F6350AB3297FE2E3002E369A /* mockVersions.json */,
 			);
 			path = SBTTestUITests;
 			sourceTree = "<group>";
@@ -143,6 +150,9 @@
 			dependencies = (
 			);
 			name = SBTTest;
+			packageProductDependencies = (
+				F6350AB1297FDED6002E369A /* SBTUITestTunnelServer */,
+			);
 			productName = SBTTest;
 			productReference = F6350A81297FDEAE002E369A /* SBTTest.app */;
 			productType = "com.apple.product-type.application";
@@ -179,6 +189,9 @@
 				F6350A9D297FDEAF002E369A /* PBXTargetDependency */,
 			);
 			name = SBTTestUITests;
+			packageProductDependencies = (
+				F6350AAF297FDED6002E369A /* SBTUITestTunnelClient */,
+			);
 			productName = SBTTestUITests;
 			productReference = F6350A9B297FDEAF002E369A /* SBTTestUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -215,6 +228,9 @@
 				Base,
 			);
 			mainGroup = F6350A78297FDEAE002E369A;
+			packageReferences = (
+				F6350AAE297FDED6002E369A /* XCRemoteSwiftPackageReference "SBTUITestTunnel" */,
+			);
 			productRefGroup = F6350A82297FDEAE002E369A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -247,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6350AB4297FE2E3002E369A /* mockVersions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +600,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F6350AAE297FDED6002E369A /* XCRemoteSwiftPackageReference "SBTUITestTunnel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Subito-it/SBTUITestTunnel";
+			requirement = {
+				branch = 243fa96ed53ccddcaddb63161574f3fedb9b9cee;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F6350AAF297FDED6002E369A /* SBTUITestTunnelClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6350AAE297FDED6002E369A /* XCRemoteSwiftPackageReference "SBTUITestTunnel" */;
+			productName = SBTUITestTunnelClient;
+		};
+		F6350AB1297FDED6002E369A /* SBTUITestTunnelServer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6350AAE297FDED6002E369A /* XCRemoteSwiftPackageReference "SBTUITestTunnel" */;
+			productName = SBTUITestTunnelServer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F6350A79297FDEAE002E369A /* Project object */;
 }

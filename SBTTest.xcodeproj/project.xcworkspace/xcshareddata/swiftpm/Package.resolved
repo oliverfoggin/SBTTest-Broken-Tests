@@ -1,0 +1,22 @@
+{
+  "pins" : [
+    {
+      "identity" : "gcdwebserver",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Subito-it/GCDWebServer.git",
+      "state" : {
+        "revision" : "53a75d58ce45adee997340f25581bf54b46cfc20",
+        "version" : "4.0.0"
+      }
+    },
+    {
+      "identity" : "sbtuitesttunnel",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Subito-it/SBTUITestTunnel",
+      "state" : {
+        "revision" : "243fa96ed53ccddcaddb63161574f3fedb9b9cee"
+      }
+    }
+  ],
+  "version" : 2
+}
