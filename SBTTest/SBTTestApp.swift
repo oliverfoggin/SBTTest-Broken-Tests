@@ -1,10 +1,3 @@
-//
-//  SBTTestApp.swift
-//  SBTTest
-//
-//  Created by Oliver Foggin on 24/01/2023.
-//
-
 import SwiftUI
 import SBTUITestTunnelServer
 
@@ -31,22 +24,6 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 //		title = "Welcome to the app!"
 
 		return true
-	}
-
-	func applicationDidBecomeActive(_ application: UIApplication) {
-	}
-
-	func application(
-		_ application: UIApplication,
-		didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
-	) {
-
-	}
-
-	func application(
-		_ application: UIApplication,
-		didFailToRegisterForRemoteNotificationsWithError error: Error
-	) {
 	}
 }
 
